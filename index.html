@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Especialistas em Cicatrização de Feridas em Santo Amaro | Doutor Feridas</title>
+  <meta name="description" content="Ferida que não fecha há semanas ou meses? A Doutor Feridas trata pé diabético, escara, ferida na perna e casos difíceis em Santo Amaro. Avaliação gratuita. Fale no WhatsApp agora.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Especialistas em Cicatrização de Feridas em Santo Amaro">
+  <meta property="og:description" content="Ferida que não fecha? A gente trata casos que outros não resolveram. Avaliação gratuita em Santo Amaro.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --azul:       #1a4f7a;
+      --azul-claro: #2a6fa8;
+      --verde:      #27ae60;
+      --wpp:        #25D366;
+      --wpp-hover:  #1ebe57;
+      --texto:      #1a1a2e;
+      --cinza:      #6b7280;
+      --fundo:      #f8fafc;
+      --branco:     #ffffff;
+      --radius:     12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--texto);
+      background: var(--branco);
+      line-height: 1.6;
+    }
+
+    /* ── UTILITÁRIOS ── */
+    .container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+    .btn-wpp {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      background: var(--wpp); color: #fff; font-weight: 700; font-size: 1.05rem;
+      padding: 16px 28px; border-radius: 50px; border: none; cursor: pointer;
+      text-decoration: none; transition: background .2s, transform .1s;
+      box-shadow: 0 4px 14px rgba(37,211,102,.35);
+    }
+    .btn-wpp:hover { background: var(--wpp-hover); transform: translateY(-1px); }
+    .btn-wpp svg { flex-shrink: 0; }
+    .secao-titulo {
+      font-size: 1.35rem; font-weight: 800; color: var(--azul);
+      line-height: 1.3; margin-bottom: 8px;
+    }
+    .secao-sub { color: var(--cinza); font-size: .95rem; margin-bottom: 24px; }
+    section { padding: 56px 0; }
+    section:nth-child(even) { background: var(--fundo); }
+
+    /* ── HERO ── */
+    #hero {
+      background: linear-gradient(150deg, #0d2f4f 0%, #1a4f7a 60%, #1e6091 100%);
+      padding: 48px 0 52px;
+      color: #fff;
+    }
+    #hero .logo {
+      font-size: .85rem; font-weight: 600; letter-spacing: .5px;
+      color: rgba(255,255,255,.7); text-transform: uppercase; margin-bottom: 28px;
+    }
+    #hero h1 {
+      font-size: clamp(1.6rem, 5vw, 2rem); font-weight: 800;
+      line-height: 1.2; margin-bottom: 14px;
+    }
+    #hero h1 span { color: #5ecfff; }
+    #hero .sub {
+      font-size: 1.05rem; color: rgba(255,255,255,.88);
+      margin-bottom: 24px; line-height: 1.55;
+    }
+    .chips {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin-bottom: 30px;
+    }
+    .chip {
+      background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25);
+      color: #fff; font-size: .85rem; font-weight: 500;
+      padding: 6px 14px; border-radius: 50px;
+    }
+    #hero .btn-wpp { width: 100%; max-width: 380px; font-size: 1.1rem; padding: 18px; }
+    .microcopy {
+      font-size: .78rem; color: rgba(255,255,255,.55);
+      margin-top: 10px; text-align: center;
+    }
+
+    /* ── DEPOIMENTOS ── */
+    #depoimentos .track-wrap {
+      overflow-x: auto; scroll-snap-type: x mandatory;
+      display: flex; gap: 16px; padding-bottom: 12px;
+      scrollbar-width: none;
+    }
+    #depoimentos .track-wrap::-webkit-scrollbar { display: none; }
+    .dep-card {
+      flex: 0 0 280px; scroll-snap-align: start;
+      background: var(--branco); border-radius: var(--radius);
+      border: 1px solid #e5e7eb; padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    }
+    .dep-card .estrelas { color: #f59e0b; font-size: 1rem; margin-bottom: 8px; }
+    .dep-card .texto {
+      font-size: .9rem; color: #374151; line-height: 1.55;
+      margin-bottom: 12px; font-style: italic;
+    }
+    .dep-card .autor {
+      font-size: .8rem; color: var(--cinza); font-weight: 600;
+    }
+    .dep-card .g-logo {
+      display: flex; align-items: center; gap: 5px;
+      font-size: .75rem; color: var(--cinza); margin-top: 4px;
+    }
+    .dep-placeholder {
+      background: #f1f5f9; border: 2px dashed #cbd5e1; color: #64748b;
+      font-size: .82rem; text-align: center; padding: 20px;
+      border-radius: var(--radius); flex: 0 0 280px;
+    }
+    .dep-placeholder strong { display: block; margin-bottom: 4px; color: #475569; }
+
+    /* ── PROBLEMAS ── */
+    #problemas ul {
+      list-style: none; display: flex; flex-direction: column; gap: 12px;
+      margin-bottom: 28px;
+    }
+    #problemas li {
+      background: var(--branco); border-left: 4px solid var(--azul-claro);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 14px 16px; font-size: .95rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    }
+    #problemas li::before { content: ""; }
+
+    /* ── COMO FUNCIONA ── */
+    .passos { display: flex; flex-direction: column; gap: 20px; margin-bottom: 28px; }
+    .passo {
+      display: flex; gap: 16px; align-items: flex-start;
+      background: var(--branco); border-radius: var(--radius);
+      padding: 18px; box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    }
+    .passo-num {
+      flex-shrink: 0; width: 36px; height: 36px;
+      background: var(--azul); color: #fff;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: .95rem;
+    }
+    .passo-txt strong { display: block; font-weight: 700; margin-bottom: 3px; }
+    .passo-txt span { font-size: .9rem; color: var(--cinza); }
+
+    /* ── TECNOLOGIAS ── */
+    #tecnologias { background: var(--azul); color: #fff; }
+    #tecnologias .secao-titulo { color: #fff; }
+    #tecnologias .secao-sub { color: rgba(255,255,255,.75); }
+    #tecnologias .intro { color: rgba(255,255,255,.85); font-size: .95rem; margin-bottom: 24px; }
+    .tec-grid { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
+    .tec-item {
+      background: rgba(255,255,255,.1); border-radius: var(--radius);
+      padding: 16px 18px; border-left: 4px solid #5ecfff;
+    }
+    .tec-item strong { display: block; color: #5ecfff; margin-bottom: 4px; font-size: .95rem; }
+    .tec-item span { font-size: .88rem; color: rgba(255,255,255,.8); }
+    .tec-anchor { color: rgba(255,255,255,.9); font-style: italic; font-size: .95rem; }
+    #tecnologias .btn-wpp { background: var(--wpp); max-width: 100%; }
+
+    /* ── OBJEÇÕES ── */
+    #objecoes .abertura {
+      background: #eff6ff; border-left: 4px solid var(--azul-claro);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 18px; margin-bottom: 24px;
+      font-size: .95rem; color: #1e40af; line-height: 1.55;
+    }
+    .faq { display: flex; flex-direction: column; gap: 16px; margin-bottom: 28px; }
+    .faq-item { background: var(--branco); border-radius: var(--radius); padding: 18px; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+    .faq-item .pergunta { font-weight: 700; color: var(--azul); margin-bottom: 6px; font-size: .95rem; }
+    .faq-item .resposta { font-size: .9rem; color: #374151; line-height: 1.55; }
+
+    /* ── URGÊNCIA / CTA FINAL ── */
+    #urgencia {
+      background: linear-gradient(135deg, #0d2f4f, #1a4f7a);
+      color: #fff; text-align: center;
+    }
+    #urgencia .secao-titulo { color: #fff; font-size: 1.25rem; }
+    #urgencia p { color: rgba(255,255,255,.85); font-size: .95rem; margin: 16px 0 28px; line-height: 1.6; }
+    #urgencia .btn-wpp { margin: 0 auto; max-width: 380px; font-size: 1.1rem; }
+    #urgencia .micro { color: rgba(255,255,255,.5); font-size: .78rem; margin-top: 12px; }
+
+    /* ── EQUIPE ── */
+    #equipe { padding: 40px 0; border-top: 1px solid #e5e7eb; }
+    #equipe .secao-titulo { font-size: 1.1rem; }
+    #equipe p { font-size: .9rem; color: var(--cinza); line-height: 1.6; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0d2f4f; color: rgba(255,255,255,.5);
+      text-align: center; padding: 20px;
+      font-size: .78rem;
+    }
+
+    /* ── WHATSAPP FLUTUANTE ── */
+    .wpp-float {
+      position: fixed; bottom: 24px; right: 20px; z-index: 999;
+      background: var(--wpp); color: #fff;
+      width: 56px; height: 56px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(37,211,102,.5);
+      text-decoration: none; transition: transform .2s;
+    }
+    .wpp-float:hover { transform: scale(1.1); }
+
+    @media (min-width: 640px) {
+      #hero h1 { font-size: 2.1rem; }
+      .dep-card, .dep-placeholder { flex: 0 0 320px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="container">
+    <div class="logo">🏥 Doutor Feridas · Santo Amaro</div>
+    <h1>Especialistas em <span>cicatrização de feridas</span> em Santo Amaro</h1>
+    <p class="sub">Ferida que não fecha há semanas ou meses?<br>A gente trata casos que outros não resolveram.</p>
+    <div class="chips">
+      <span class="chip">✓ Pé diabético</span>
+      <span class="chip">✓ Escara</span>
+      <span class="chip">✓ Ferida na perna</span>
+    </div>
+    <a class="btn-wpp" href="https://wa.me/5511000000000?text=Ol%C3%A1%2C+sou+de+Santo+Amaro+e+preciso+de+ajuda+com+uma+ferida+que+n%C3%A3o+cicatriza." target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+      </svg>
+      Falar no WhatsApp agora
+    </a>
+    <p class="microcopy">Avaliação gratuita · Sem compromisso</p>
+  </div>
+</section>
+
+<!-- ── DEPOIMENTOS ── -->
+<section id="depoimentos">
+  <div class="container">
+    <h2 class="secao-titulo">Quem chega aqui geralmente vem assim:<br>cansado, com medo e sem saber mais o que fazer.</h2>
+    <p class="secao-sub">Quem melhora deixa o que mais importa: relato real.</p>
+
+    <div class="track-wrap">
+
+      <!-- SUBSTITUIR pelos prints reais do Google Meu Negócio da unidade Santo Amaro -->
+      <div class="dep-placeholder">
+        <strong>⭐⭐⭐⭐⭐ Avaliação real</strong>
+        Substituir por print real do Google Meu Negócio — paciente com pé diabético ou escara
+      </div>
+      <div class="dep-placeholder">
+        <strong>⭐⭐⭐⭐⭐ Avaliação real</strong>
+        Substituir por print real do Google Meu Negócio — familiar cuidador
+      </div>
+      <div class="dep-placeholder">
+        <strong>⭐⭐⭐⭐⭐ Avaliação real</strong>
+        Substituir por print real do Google Meu Negócio — ferida pós-cirúrgica
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── PROBLEMAS ── -->
+<section id="problemas">
+  <div class="container">
+    <h2 class="secao-titulo">Se você se identifica com uma dessas situações, essa página é para você</h2>
+    <ul>
+      <li>🦶 Pé diabético com dor, secreção, escurecimento ou risco de amputação</li>
+      <li>🛏️ Escara em idoso acamado (costas, quadril, calcanhar)</li>
+      <li>🦵 Ferida na perna que não cicatriza e vive abrindo de novo</li>
+      <li>🏥 Ferida pós-cirúrgica que não fechou no tempo esperado</li>
+      <li>⚠️ Ferida infectada, com odor, dor ou piora progressiva</li>
+    </ul>
+    <a class="btn-wpp" href="https://wa.me/5511000000000?text=Ol%C3%A1%2C+sou+de+Santo+Amaro+e+preciso+de+orienta%C3%A7%C3%A3o+sobre+tratamento+de+feridas." target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+      </svg>
+      Quero orientação no WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ── COMO FUNCIONA ── -->
+<section id="como-funciona">
+  <div class="container">
+    <h2 class="secao-titulo">Passo a passo simples para começar</h2>
+    <div class="passos">
+      <div class="passo">
+        <div class="passo-num">1</div>
+        <div class="passo-txt">
+          <strong>Você chama no WhatsApp</strong>
+          <span>Conta há quanto tempo a ferida existe e o que já foi tentado.</span>
+        </div>
+      </div>
+      <div class="passo">
+        <div class="passo-num">2</div>
+        <div class="passo-txt">
+          <strong>Fazemos avaliação especializada</strong>
+          <span>Identificamos a causa da não cicatrização e o risco atual do caso.</span>
+        </div>
+      </div>
+      <div class="passo">
+        <div class="passo-num">3</div>
+        <div class="passo-txt">
+          <strong>Iniciamos o plano de tratamento</strong>
+          <span>Aplicamos o protocolo indicado e acompanhamos de perto a evolução.</span>
+        </div>
+      </div>
+    </div>
+    <a class="btn-wpp" href="https://wa.me/5511000000000?text=Ol%C3%A1%2C+quero+come%C3%A7ar+meu+atendimento+na+unidade+de+Santo+Amaro." target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+      </svg>
+      Começar meu atendimento agora
+    </a>
+  </div>
+</section>
+
+<!-- ── TECNOLOGIAS ── -->
+<section id="tecnologias">
+  <div class="container">
+    <h2 class="secao-titulo">Não é "mais um curativo".<br>É tratamento especializado para ferida complexa.</h2>
+    <p class="intro">Muita gente chega aqui depois de tentar apenas o básico. Quando indicado no seu caso, usamos recursos avançados para acelerar cicatrização, controlar infecção e reduzir dor.</p>
+    <div class="tec-grid">
+      <div class="tec-item">
+        <strong>Laser terapêutico</strong>
+        <span>Reduz inflamação e estimula o avanço da cicatrização</span>
+      </div>
+      <div class="tec-item">
+        <strong>Curativo a vácuo</strong>
+        <span>Acelera o fechamento em feridas mais profundas ou abertas</span>
+      </div>
+      <div class="tec-item">
+        <strong>Plasma</strong>
+        <span>Estimulação celular avançada — a maioria dos pacientes nunca foi tratada com isso antes</span>
+      </div>
+      <div class="tec-item">
+        <strong>Sem protocolo genérico</strong>
+        <span>Avaliamos a causa específica da sua ferida antes de qualquer decisão. Cada ferida tem uma causa. Tratamos a causa, não só a ferida.</span>
+      </div>
+    </div>
+    <p class="tec-anchor">Você não recebe promessa vazia. Recebe método, técnica e acompanhamento.</p>
+  </div>
+</section>
+
+<!-- ── OBJEÇÕES ── -->
+<section id="objecoes">
+  <div class="container">
+    <h2 class="secao-titulo">Dúvidas comuns de quem está pensando em buscar ajuda</h2>
+    <div class="abertura">
+      Você não está sozinho. Quem chega aqui carrega semanas, meses ou anos tentando resolver. A gente entende isso — e trata com a seriedade e o acompanhamento que o caso merece.
+    </div>
+    <div class="faq">
+      <div class="faq-item">
+        <p class="pergunta">"Já tentei de tudo. Ainda tem jeito?"</p>
+        <p class="resposta">Em muitos casos, sim. O ponto é tratar a causa certa com protocolo especializado, não repetir tentativa que já falhou.</p>
+      </div>
+      <div class="faq-item">
+        <p class="pergunta">"Sou familiar e me sinto culpado por não conseguir resolver."</p>
+        <p class="resposta">Você não está falhando. Ferida crônica é complexa e precisa de cuidado técnico específico.</p>
+      </div>
+      <div class="faq-item">
+        <p class="pergunta">"Tenho medo de ouvir que vai amputar."</p>
+        <p class="resposta">Esse medo é real. Justamente por isso, começar cedo aumenta a chance de evitar desfechos graves.</p>
+      </div>
+      <div class="faq-item">
+        <p class="pergunta">"Vale procurar agora ou esperar mais um pouco?"</p>
+        <p class="resposta">Ferida crônica tende a piorar com o tempo. Agir cedo costuma reduzir risco e sofrimento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── URGÊNCIA / CTA FINAL ── -->
+<section id="urgencia">
+  <div class="container">
+    <h2 class="secao-titulo">Quanto mais cedo tratar, maior a chance de preservar tecido, mobilidade e qualidade de vida.</h2>
+    <p>Se a ferida não cicatriza, esperar pode custar caro em dor, tempo e risco clínico.<br>Seu próximo passo pode começar por uma mensagem.</p>
+    <a class="btn-wpp" href="https://wa.me/5511000000000?text=Ol%C3%A1%2C+quero+falar+com+a+equipe+de+Santo+Amaro+sobre+tratamento+de+feridas." target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+      </svg>
+      Falar com a equipe de Santo Amaro no WhatsApp
+    </a>
+    <p class="micro">Atendimento para paciente e familiar · Linguagem clara · Foco em resultado clínico real</p>
+  </div>
+</section>
+
+<!-- ── EQUIPE ── -->
+<section id="equipe">
+  <div class="container">
+    <h2 class="secao-titulo">Equipe especializada em tratamento de feridas</h2>
+    <p>Profissionais habilitados, com registro ativo e atuação focada em cicatrização de feridas complexas. Aqui, técnica e acolhimento caminham juntos.</p>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>© 2026 Doutor Feridas · Unidade Santo Amaro · Todos os direitos reservados</p>
+</footer>
+
+<!-- WhatsApp flutuante -->
+<a class="wpp-float" href="https://wa.me/5511000000000?text=Ol%C3%A1%2C+sou+de+Santo+Amaro+e+preciso+de+ajuda+com+uma+ferida." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="white" viewBox="0 0 16 16">
+    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+  </svg>
+</a>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+name = "doutor-feridas-santo-amaro"
+pages_build_output_dir = "."
+
+[env.production]
+name = "doutor-feridas-santo-amaro"

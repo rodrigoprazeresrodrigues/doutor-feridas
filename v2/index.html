@@ -264,26 +264,7 @@
       color: rgba(255,255,255,0.78);
       font-size: 0.78rem;
       line-height: 1.45;
-    }
-
-    /* Faixa de alerta no topo (antes do menu) — destaque complementar ao azul */
-    .top-alert {
-      background: linear-gradient(90deg, #7f1d1d 0%, #b91c1c 45%, #ef4444 100%);
-      color: #fff;
-      border-top: 3px solid #58B9B7;
-      border-bottom: 3px solid #58B9B7;
-      box-shadow: 0 10px 24px rgba(127, 29, 29, 0.35);
-    }
-    .top-alert .alert-badge {
-      background: rgba(2, 6, 23, 0.35);
-      border: 1px solid rgba(255,255,255,0.4);
-      color: #fef2f2;
-    }
-    .top-alert .alert-copy {
-      color: #fff7ed;
-    }
-
-    /* UX da dobra: alvo 960 (mobile) / 1080 (desktop), com adaptação para telas baixas */
+    }/* UX da dobra: alvo 960 (mobile) / 1080 (desktop), com adaptação para telas baixas */
     #inicio { min-height: 960px; }
     @media (min-width: 768px) {
       #inicio { min-height: 1080px; }
@@ -384,27 +365,10 @@
   </style>
 </head>
 
-<body>
-
-<!-- ============================================================
-  FAIXA ALERTA TOPO
-  ============================================================ -->
-<section class="top-alert fixed top-0 left-0 right-0 z-[60]">
-  <div class="max-w-[1440px] mx-auto px-4 py-2.5 text-center flex items-center justify-center gap-2 md:gap-3">
-    <span class="alert-badge inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] md:text-xs font-black uppercase tracking-wider">
-      <span class="material-symbols-rounded" style="font-size:15px;">warning</span>
-      ATENÇÃO
-    </span>
-    <p class="alert-copy text-sm md:text-base font-black tracking-wide">
-      Você está a um passo de cicatrizar essa ferida, leia até o final.
-    </p>
-  </div>
-</section>
-
-<!-- ============================================================
+<body>\r\n<!-- ============================================================
   NAV — Fixa, glass, pill
   ============================================================ -->
-<header class="fixed top-12 left-0 right-0 z-50 px-4 py-3">
+<header class="fixed top-0 left-0 right-0 z-50 px-4 py-3">
   <nav class="max-w-[1440px] mx-auto flex items-center justify-between glass px-5 py-2.5 rounded-full shadow-lg" style="box-shadow: 0 4px 30px rgba(30,136,201,0.12);">
     <!-- Logo -->
     <a href="#" class="flex items-center">
@@ -451,13 +415,13 @@
   BLOCO 1 — HERO
   Regra: máx 4 elementos visíveis sem scroll no iPhone SE (375px)
   ============================================================ -->
-<main id="inicio" class="hero-gradient relative overflow-hidden pt-40 md:pt-44 pb-16 md:pb-24 flex items-center">
+<main id="inicio" class="hero-gradient relative overflow-hidden pt-24 pb-16 md:pb-24 flex items-center">
 
   <!-- Blobs decorativos -->
   <div class="absolute top-0 right-0 -mr-16 w-80 h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none animate-blob"></div>
   <div class="absolute bottom-20 left-0 -ml-16 w-64 h-64 bg-secondary/5 rounded-full blur-[80px] pointer-events-none animate-blob delay-2s"></div>
 
-  <div class="max-w-[1440px] mx-auto px-4 md:px-6 w-full flex items-center justify-center min-h-[calc(100dvh-188px)]">
+  <div class="max-w-[1440px] mx-auto px-4 md:px-6 w-full flex items-center justify-center min-h-[calc(100dvh-140px)]">
     <div class="max-w-2xl mx-auto text-center">
 
       <!-- Badge -->
@@ -1173,6 +1137,7 @@
 
 </body>
 </html>
+
 
 
 

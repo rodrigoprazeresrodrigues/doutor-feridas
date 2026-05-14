@@ -266,6 +266,21 @@
       line-height: 1.45;
     }
 
+    /* Banner de atenção da primeira dobra */
+    .alert-banner {
+      background: linear-gradient(90deg, #fef08a 0%, #facc15 45%, #f97316 100%);
+      color: #111827;
+      border: 2px solid #111827;
+      box-shadow: 0 10px 24px rgba(249, 115, 22, 0.35);
+    }
+    .alert-banner .label {
+      background: #111827;
+      color: #fef08a;
+    }
+    html.dark .alert-banner {
+      color: #111827;
+    }
+
     /* UX da dobra: alvo 960 (mobile) / 1080 (desktop), com adaptação para telas baixas */
     #inicio { min-height: 960px; }
     @media (min-width: 768px) {
@@ -435,6 +450,13 @@
       </div>
 
       <!-- Headline -->
+      <div class="alert-banner rounded-2xl px-4 py-3 mb-5 text-center">
+        <span class="label inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider mb-2">Atenção</span>
+        <p class="text-sm md:text-base font-extrabold leading-snug">
+          Você está a um passo de cicatrizar essa ferida, leia até o final.
+        </p>
+      </div>
+
       <h1 class="font-black leading-tight mb-3 text-secondary"
           style="font-size: clamp(2rem, 5.5vw, 3.25rem); letter-spacing: -0.03em; line-height: 1.1;">
         Especialistas em cicatrização de feridas em<br>
@@ -685,7 +707,7 @@
     <!-- Mobile: lista vertical simples -->
     <div class="flex flex-col gap-4 mb-10 md:hidden">
 
-      <div class="flex flex-col items-center text-center gap-4 bg-white p-5 rounded-2xl" style="box-shadow: 0 4px 16px rgba(0,0,0,0.07);">
+      <div class="flex flex-col items-center text-center gap-4 bg-white p-5 rounded-2xl min-h-[220px]" style="box-shadow: 0 4px 16px rgba(0,0,0,0.07);">
         <div class="w-12 h-12 rounded-full bg-gradient-to-br from-secondary to-primary flex items-center justify-center flex-shrink-0 text-white font-black text-lg">1</div>
         <div>
           <h3 class="font-bold text-secondary text-lg mb-1">Você chama no WhatsApp</h3>
@@ -693,7 +715,7 @@
         </div>
       </div>
 
-      <div class="flex flex-col items-center text-center gap-4 bg-white p-5 rounded-2xl" style="box-shadow: 0 4px 16px rgba(0,0,0,0.07);">
+      <div class="flex flex-col items-center text-center gap-4 bg-white p-5 rounded-2xl min-h-[220px]" style="box-shadow: 0 4px 16px rgba(0,0,0,0.07);">
         <div class="w-12 h-12 rounded-full bg-gradient-to-br from-secondary to-primary flex items-center justify-center flex-shrink-0 text-white font-black text-lg">2</div>
         <div>
           <h3 class="font-bold text-secondary text-lg mb-1">Avaliação especializada</h3>
@@ -701,7 +723,7 @@
         </div>
       </div>
 
-      <div class="flex flex-col items-center text-center gap-4 bg-white p-5 rounded-2xl" style="box-shadow: 0 4px 16px rgba(0,0,0,0.07);">
+      <div class="flex flex-col items-center text-center gap-4 bg-white p-5 rounded-2xl min-h-[220px]" style="box-shadow: 0 4px 16px rgba(0,0,0,0.07);">
         <div class="w-12 h-12 rounded-full bg-gradient-to-br from-secondary to-primary flex items-center justify-center flex-shrink-0 text-white font-black text-lg">3</div>
         <div>
           <h3 class="font-bold text-secondary text-lg mb-1">Plano de tratamento</h3>

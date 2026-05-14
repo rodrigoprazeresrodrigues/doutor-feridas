@@ -336,6 +336,13 @@
     html.dark .text-slate-400, html.dark .text-slate-500, html.dark .text-slate-600 { color: #cbd5e1 !important; }
     html.dark .text-primary { color: #38bdf8 !important; }
     html.dark .text-secondary { color: #e2e8f0 !important; }
+    html.dark .hero-badge {
+      background: rgba(255,255,255,0.12) !important;
+      border-color: rgba(255,255,255,0.22) !important;
+    }
+    html.dark .hero-badge .hero-badge-label {
+      color: #dbeafe !important;
+    }
     html.dark .bg-primary\/10 {
       background-color: rgba(56, 189, 248, 0.18) !important;
       border-color: rgba(56, 189, 248, 0.32) !important;
@@ -405,19 +412,19 @@
   BLOCO 1 — HERO
   Regra: máx 4 elementos visíveis sem scroll no iPhone SE (375px)
   ============================================================ -->
-<main id="inicio" class="hero-gradient relative overflow-hidden pt-24 pb-16 md:pb-24">
+<main id="inicio" class="hero-gradient relative overflow-hidden pt-24 pb-16 md:pb-24 flex items-center">
 
   <!-- Blobs decorativos -->
   <div class="absolute top-0 right-0 -mr-16 w-80 h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none animate-blob"></div>
   <div class="absolute bottom-20 left-0 -ml-16 w-64 h-64 bg-secondary/5 rounded-full blur-[80px] pointer-events-none animate-blob delay-2s"></div>
 
-  <div class="max-w-[1440px] mx-auto px-4 md:px-6 h-full flex items-center justify-center">
+  <div class="max-w-[1440px] mx-auto px-4 md:px-6 w-full flex items-center justify-center min-h-[calc(100dvh-140px)]">
     <div class="max-w-2xl mx-auto text-center">
 
       <!-- Badge -->
-      <div class="inline-flex items-center gap-2 bg-white/80 px-4 py-1.5 rounded-full border border-slate-200 shadow-sm mb-5">
+      <div class="hero-badge inline-flex items-center gap-2 bg-white/80 px-4 py-1.5 rounded-full border border-slate-200 shadow-sm mb-5">
         <span class="material-symbols-rounded text-accent" style="font-size:18px;">medical_services</span>
-        <span class="text-xs font-bold uppercase tracking-widest text-slate-500">Santo Amaro · São Paulo</span>
+        <span class="hero-badge-label text-xs font-bold uppercase tracking-widest text-slate-500">Santo Amaro · São Paulo</span>
       </div>
 
       <!-- Headline -->
@@ -518,26 +525,24 @@
 
     <div class="mt-10 md:mt-12 p-4 md:p-5 rounded-2xl border border-primary/20 bg-gradient-to-b from-primary/5 to-transparent">
       <div class="text-center mb-6 max-w-2xl mx-auto">
-        <div class="inline-flex items-center gap-2 bg-white px-4 py-1.5 rounded-full border border-slate-200 shadow-sm mb-4">
+        <div class="inline-flex items-center gap-2 bg-white px-4 py-1.5 rounded-full border border-slate-200 shadow-sm mb-2">
           <span class="material-symbols-rounded text-accent" style="font-size:16px;">verified</span>
           <span class="text-xs font-bold uppercase tracking-widest text-slate-500">Certificados de alta</span>
         </div>
-        <h3 class="font-black text-secondary mb-3" style="font-size: clamp(1.35rem, 3vw, 2rem); letter-spacing: -0.025em;">
-          Para quem chega achando que não tem mais jeito,<br>
-          <span class="text-primary">ver alguém recebendo alta muda tudo.</span>
-        </h3>
-        <p class="text-slate-500 text-base leading-relaxed">
-          Fotos reais de pacientes que concluíram o tratamento. Cada caso é avaliado individualmente, mas essas imagens mostram o que buscamos: evolução, acompanhamento e alta quando o quadro permite.
-        </p>
-        <p class="text-primary font-bold text-base md:text-lg mt-3">
-          Quero ver sua foto com esse Certificado de Alta no nosso mural.
-        </p>
       </div>
       <div class="alta-grid">
         <div class="alta-item"><img src="./assets/doutor-feridas-certificado-de-alta-paciente-01.jpeg" alt="Paciente segurando certificado de alta na Doutor Feridas"></div>
         <div class="alta-item"><img src="./assets/doutor-feridas-certificado-de-alta-paciente-02.jpeg" alt="Paciente com certificado de alta na Doutor Feridas"></div>
         <div class="alta-item"><img src="./assets/doutor-feridas-certificado-de-alta-paciente-03.jpeg" alt="Alta de paciente acompanhado pela equipe Doutor Feridas"></div>
         <div class="alta-item"><img src="./assets/doutor-feridas-certificado-de-alta-paciente-04.jpeg" alt="Paciente recebeu alta após tratamento na Doutor Feridas"></div>
+      </div>
+      <div class="text-center mt-6 max-w-3xl mx-auto">
+        <p class="text-slate-500 text-base leading-relaxed">
+          Fotos reais de pacientes que concluíram o tratamento. Cada caso é avaliado individualmente, mas essas imagens mostram o que buscamos: evolução, acompanhamento e alta quando o quadro permite.
+        </p>
+        <p class="text-primary font-black text-lg md:text-2xl mt-4 tracking-tight">
+          Quero ver sua foto com esse Certificado de Alta no nosso mural.
+        </p>
       </div>
     </div>
   </div>
@@ -954,42 +959,30 @@
   BLOCO 8 — EQUIPE
   ============================================================ -->
 <section class="py-12 md:py-16 bg-slate-50">
-  <div class="max-w-3xl mx-auto px-4 md:px-6 text-center">
+  <div class="max-w-5xl mx-auto px-4 md:px-6">
 
-    <h2 class="font-black text-secondary mb-3" style="font-size: clamp(1.3rem, 3vw, 1.9rem); letter-spacing: -0.025em;">
+    <h2 class="font-black text-secondary mb-8 text-center" style="font-size: clamp(1.3rem, 3vw, 1.9rem); letter-spacing: -0.025em;">
       Equipe especializada em tratamento de feridas
     </h2>
 
-    <!-- Foto real da equipe Santo Amaro -->
-    <img src="./assets/doutor-feridas-equipe-santo-amaro.jpeg"
-         alt="Equipe Doutor Feridas Santo Amaro"
-         class="w-52 h-52 md:w-64 md:h-64 rounded-full mx-auto mb-5 object-cover object-top"
-         style="border: 3px solid #1E88C9; box-shadow: 0 4px 20px rgba(30,136,201,0.2);">
-
-    <p class="text-slate-700 text-base font-semibold max-w-lg mx-auto mb-1">
-      Dr. Evandro Reis · CRM-SP 145907
-    </p>
-    <p class="text-slate-600 text-base leading-relaxed max-w-lg mx-auto mb-2">
-      Médico responsável técnico, com atuação focada em cicatrização de feridas complexas.
-    </p>
-    <p class="text-slate-500 text-sm leading-relaxed max-w-lg mx-auto mb-2">
-      Formações: Médico e Enfermeiro Estomaterapeuta.
-    </p>
-    <p class="text-slate-500 text-sm">Técnica e acolhimento caminham juntos.</p>
-
-    <!-- Endereço -->
-    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-slate-500">
-      <div class="flex items-center gap-2">
-        <span class="material-symbols-rounded text-primary" style="font-size:18px;">location_on</span>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+M%C3%A1rio+Lopez+Le%C3%A3o%2C+520%2C+Santo+Amaro%2C+S%C3%A3o+Paulo%2C+SP"
-           target="_blank" rel="noopener noreferrer"
-           class="hover:text-primary transition-colors underline decoration-dotted underline-offset-2">
-          Av. Mário Lopez Leão, 520 · Santo Amaro · SP
-        </a>
+    <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+      <div class="flex justify-center">
+        <img src="./assets/doutor-feridas-equipe-santo-amaro.jpeg"
+             alt="Equipe Doutor Feridas Santo Amaro"
+             class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover object-top"
+             style="border: 3px solid #1E88C9; box-shadow: 0 4px 20px rgba(30,136,201,0.2);">
       </div>
-      <div class="flex items-center gap-2">
-        <span class="material-symbols-rounded text-primary" style="font-size:18px;">phone</span>
-        <a href="https://wa.me/message/WBQS6CCQASOHK1" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">(11) 99437-1734</a>
+      <div class="text-center md:text-left">
+        <p class="text-slate-700 text-xl font-semibold mb-2">
+          Dr. Evandro Reis · CRM-SP 145907
+        </p>
+        <p class="text-slate-600 text-lg leading-relaxed mb-3">
+          Médico responsável técnico, com atuação focada em cicatrização de feridas complexas.
+        </p>
+        <p class="text-slate-500 text-base leading-relaxed mb-2">
+          Formações: Médico e Enfermeiro Estomaterapeuta.
+        </p>
+        <p class="text-slate-500 text-base">Técnica e acolhimento caminham juntos.</p>
       </div>
     </div>
   </div>

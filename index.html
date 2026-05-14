@@ -266,10 +266,14 @@
       line-height: 1.45;
     }
 
-    /* UX da dobra: mantém altura-alvo sem gerar vazio excessivo em telas baixas */
-    @media (max-height: 980px) {
+    /* UX da dobra: alvo 960 (mobile) / 1080 (desktop), com adaptação para telas baixas */
+    #inicio { min-height: 960px; }
+    @media (min-width: 768px) {
+      #inicio { min-height: 1080px; }
+    }
+    @media (max-height: 1200px) {
       #inicio {
-        min-height: auto !important;
+        min-height: 100dvh !important;
         padding-top: 104px;
         padding-bottom: 56px;
       }
@@ -329,7 +333,13 @@
     html.dark section { background-color: #0f172a !important; }
     html.dark footer  { background: #020617 !important; }
     html.dark h1, html.dark h2, html.dark h3 { color: #f1f5f9 !important; }
-    html.dark p.text-slate-500, html.dark p.text-slate-600, html.dark p.text-slate-400 { color: #94a3b8 !important; }
+    html.dark .text-slate-400, html.dark .text-slate-500, html.dark .text-slate-600 { color: #cbd5e1 !important; }
+    html.dark .text-primary { color: #38bdf8 !important; }
+    html.dark .text-secondary { color: #e2e8f0 !important; }
+    html.dark .bg-primary\/10 {
+      background-color: rgba(56, 189, 248, 0.18) !important;
+      border-color: rgba(56, 189, 248, 0.32) !important;
+    }
     html.dark .condition-card .condition-overlay {
       background: linear-gradient(to bottom, rgba(2,6,23,0.2) 0%, rgba(2,6,23,0.92) 100%);
     }
@@ -395,7 +405,7 @@
   BLOCO 1 — HERO
   Regra: máx 4 elementos visíveis sem scroll no iPhone SE (375px)
   ============================================================ -->
-<main id="inicio" class="hero-gradient relative overflow-hidden pt-24 pb-16 md:pb-24 min-h-[960px] md:min-h-[1080px]">
+<main id="inicio" class="hero-gradient relative overflow-hidden pt-24 pb-16 md:pb-24">
 
   <!-- Blobs decorativos -->
   <div class="absolute top-0 right-0 -mr-16 w-80 h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none animate-blob"></div>

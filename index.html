@@ -347,6 +347,13 @@
       background-color: rgba(56, 189, 248, 0.18) !important;
       border-color: rgba(56, 189, 248, 0.32) !important;
     }
+    /* No mobile do "Como funciona", os cards são claros: manter texto escuro no dark mode */
+    html.dark #como-funciona .md\:hidden .bg-white .text-slate-500 {
+      color: #64748b !important;
+    }
+    html.dark #como-funciona .md\:hidden .bg-white .text-secondary {
+      color: #0f172a !important;
+    }
     html.dark .condition-card .condition-overlay {
       background: linear-gradient(to bottom, rgba(2,6,23,0.2) 0%, rgba(2,6,23,0.92) 100%);
     }
@@ -969,7 +976,7 @@
       <div class="flex justify-center">
         <img src="./assets/doutor-feridas-equipe-santo-amaro.jpeg"
              alt="Equipe Doutor Feridas Santo Amaro"
-             class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover object-top"
+             class="w-full max-w-md aspect-[4/3] rounded-[28px] object-cover object-top"
              style="border: 3px solid #1E88C9; box-shadow: 0 4px 20px rgba(30,136,201,0.2);">
       </div>
       <div class="text-center md:text-left">
